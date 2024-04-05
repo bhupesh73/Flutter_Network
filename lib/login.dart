@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginuicolors/dashboard.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -21,10 +22,10 @@ class _MyLoginState extends State<MyLogin> {
           children: [
             Container(),
             Container(
-              padding: EdgeInsets.only(left: 35, top: 130),
+              padding: EdgeInsets.only(left: 35, top: 50),
               child: Text(
                 'Welcome\nBack',
-                style: TextStyle(color: Colors.white, fontSize: 33),
+                style: TextStyle(color: Colors.white, fontSize: 38),
               ),
             ),
             SingleChildScrollView(
@@ -43,7 +44,7 @@ class _MyLoginState extends State<MyLogin> {
                             decoration: InputDecoration(
                                 fillColor: Colors.grey.shade100,
                                 filled: true,
-                                hintText: "Email",
+                                hintText: "Username",
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 )),
@@ -65,46 +66,53 @@ class _MyLoginState extends State<MyLogin> {
                           SizedBox(
                             height: 40,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Sign in',
-                                style: TextStyle(
-                                    fontSize: 27, fontWeight: FontWeight.w700),
-                              ),
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundColor: Color(0xff4c505b),
-                                child: IconButton(
-                                    color: Colors.white,
-                                    onPressed: () {},
-                                    icon: Icon(
-                                      Icons.arrow_forward,
-                                    )),
-                              )
-                            ],
-                          ),
+  SizedBox(
+  width: 150, // Adjust the width as needed
+  child: Container(
+    padding: EdgeInsets.symmetric(vertical: 15),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(30),
+      color: Color.fromARGB(255, 94, 170, 232), // Change color as needed
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black26,
+          offset: Offset(0, 3),
+          blurRadius: 6,
+        ),
+      ],
+    ),
+    child: TextButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Dashboard(), // Your homepage widget
+          ),
+        );
+      },
+      child: Center(
+        child: Text(
+          'Sign in',
+          style: TextStyle(
+            fontSize: 27,
+            fontWeight: FontWeight.w700,
+            color: Colors.white, // Change text color as needed
+          ),
+        ),
+      ),
+    ),
+  ),
+),
+
+
+
                           SizedBox(
                             height: 40,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.pushNamed(context, 'register');
-                                },
-                                child: Text(
-                                  'Sign Up',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                      decoration: TextDecoration.underline,
-                                      color: Color(0xff4c505b),
-                                      fontSize: 18),
-                                ),
-                                style: ButtonStyle(),
-                              ),
+                              
                               TextButton(
                                   onPressed: () {},
                                   child: Text(
