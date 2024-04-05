@@ -67,12 +67,12 @@ class _MyLoginState extends State<MyLogin> {
                             height: 40,
                           ),
   SizedBox(
-  width: 150, // Adjust the width as needed
+  width: 150, 
   child: Container(
     padding: EdgeInsets.symmetric(vertical: 15),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(30),
-      color: Color.fromARGB(255, 94, 170, 232), // Change color as needed
+      color: Color.fromARGB(255, 94, 170, 232), 
       boxShadow: [
         BoxShadow(
           color: Colors.black26,
@@ -86,7 +86,7 @@ class _MyLoginState extends State<MyLogin> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Dashboard(), // Your homepage widget
+            builder: (context) => Dashboard(), 
           ),
         );
       },
@@ -96,7 +96,7 @@ class _MyLoginState extends State<MyLogin> {
           style: TextStyle(
             fontSize: 27,
             fontWeight: FontWeight.w700,
-            color: Colors.white, // Change text color as needed
+            color: Colors.white, 
           ),
         ),
       ),

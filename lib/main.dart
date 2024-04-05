@@ -6,11 +6,11 @@ import 'package:loginuicolors/login.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: 'login', // Set the initial route to the Dashboard page
+    initialRoute: 'login', 
     routes: {
-      '/': (context) => Dashboard(), // Define the route for the Dashboard page
+      '/': (context) => Dashboard(), 
       'login': (context) => MyLogin(),
-      'add_task': (context) => AddTask(), // Define the route for the AddTask page
+      'add_task': (context) => AddTask(), 
     },
   ));
 }

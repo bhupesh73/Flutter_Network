@@ -30,7 +30,7 @@ class _AddTaskState extends State<AddTask> {
         _pickedImage = File(pickedImage.path);
       });
     } else {
-      // Handle if no image is picked
+      
     }
   }
 
@@ -131,15 +131,15 @@ class _AddTaskState extends State<AddTask> {
               const SizedBox(height: 20),
               _pickedImage == null
                   ? const Text('No image selected.')
-                  : Image.file(_pickedImage!), // Display the picked image if available
+                  : Image.file(_pickedImage!), 
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: _captureImage, // Call the function to capture image
+                onPressed: _captureImage, 
                 child: const Text("Take Picture"),
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: _navigateToDashboard, // Navigate to Dashboard page
+                onPressed: _navigateToDashboard, 
                 child: const Text("Add"),
               ),
             ],
@@ -160,10 +160,10 @@ class _AddTaskState extends State<AddTask> {
       setState(() {
         if (isStartDate) {
           _startDate = pickedDate;
-          startDateController.text = DateFormat('yyyy-MM-dd').format(pickedDate); // Format the date
+          startDateController.text = DateFormat('yyyy-MM-dd').format(pickedDate); 
         } else {
           _endDate = pickedDate;
-          endDateController.text = DateFormat('yyyy-MM-dd').format(pickedDate); // Format the date
+          endDateController.text = DateFormat('yyyy-MM-dd').format(pickedDate); 
         }
       });
     }
